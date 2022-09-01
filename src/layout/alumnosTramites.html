@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hola</title>
+  </head>
+  <body>
+    <main class="container">
+      <nav class="navbar">
+        <ul class="navbar__links">
+          <li class="link">
+            <ion-icon name="home-outline"></ion-icon>
+            <a href="alumnosInicio.html">Inicio</a>
+          </li>
+          <li class="link">
+            <ion-icon name="ribbon-outline"></ion-icon>
+            <a href="alumnosTramites.html">Iniciar tramite</a>
+          </li>
+          <li class="link">
+            <ion-icon name="footsteps-outline"></ion-icon>
+            <a href="">Seguimiento</a>
+          </li>
+          <li class="link">
+            <ion-icon name="mail-outline"></ion-icon>
+            <a href="">Reclamos</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="content">
+        <head class="header">
+          <div class="header__logo">
+            <h1 class="logo">Sistema de certificados</h1>
+            <span class="logo__sub">Basado en blockchain</span>
+          </div>
+          <div class="header">
+            <div class="header__user">
+              <picture class="user_img">
+                <img src="" alt="Usuario" />
+              </picture>
+              <span>Usuario</span>
+            </div>
+            <button type="button">
+              <ion-icon name="exit-outline"></ion-icon>
+            </button>
+          </div>
+        </head>
+        <div class="section__formulary">
+          <h2>Bienvenidos</h2>
+          <p>
+            Para iniciar un nuevo tramite debe completar el siguiente formulario
+          </p>
+          <form class="formulary" action="#">
+            <label for="name">
+              Nombre
+              <input id="name" type="text" placeholder="Ingrese su nombre" />
+            </label>
+            <label for="lastName">
+              Apellido
+              <input
+                id="lastName"
+                type="text"
+                placeholder="Ingrese su apellido"
+              />
+            </label>
+            <label for="dni">
+              DNI
+              <input id="dni" type="number" placeholder="Ingrese su DNI" />
+            </label>
+            <label for="enrollment">
+              Matricula
+              <input
+                id="enrollment"
+                type="text"
+                placeholder="Ingrese su matricula"
+              />
+            </label>
+            <label for="career">
+              Carrera
+              <select name="career" id="career">
+                <option value="" disabled selected>Ingrese una carrera</option>
+                <option value="eisi">Ingenieria en sistemas</option>
+                <option value="elsi">Licenciatura en sistemas</option>
+                <option value="etui">
+                  Tecnicatura universitaria en sistemas
+                </option>
+              </select>
+            </label>
+            <label for="university">
+              Universidad
+              <input
+                id="university"
+                type="text"
+                placeholder="Ingrese la universidad"
+              />
+            </label>
+            <input type="submit" id="enviar" value="Enviar" />
+          </form>
+        </div>
+        <footer class="footer">
+          <p class="title__footer">Copyrigth Seminario 2®</p>
+        </footer>
+      </section>
+    </main>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
