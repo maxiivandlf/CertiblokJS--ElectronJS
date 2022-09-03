@@ -26,7 +26,7 @@ body {
 
 .header {
     height: 50vh;
-    background-image: url('../img/fondologin.jpg');
+    background-image: url('../../img/fondologin.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
