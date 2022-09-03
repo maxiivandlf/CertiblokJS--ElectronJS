@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
 :root {
   --backgraund: #1f1f1f;
   --backgraund_footer: rgba(217, 217, 217, 0.09);
@@ -7,6 +9,7 @@
   --boton_inactivo: #415659;
   --font_color: #ffffff;
   --cuadro_de_datos: rgba(217, 217, 217, 0.6);
+  --fontFamly: 'Lato', sans-serif;
 }
 
 * {
@@ -16,7 +19,7 @@
   border: none;
   text-decoration: none;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--fontFamly);
   color: var(--font_color);
 }
 ul {

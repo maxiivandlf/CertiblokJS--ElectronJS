@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../styles/globales.css" />
-    <title>Tramites Alumnos</title>
+    <title>Reclamos</title>
   </head>
   <body>
     <main class="container">
@@ -60,57 +60,60 @@
             </a>
           </div>
         </header>
-        <div class="section__formulary">
-          <h2>Bienvenidos</h2>
+
+        <div class="formulary">
+          <h2>Gestion de reclamos</h2>
           <p>
-            Para iniciar un nuevo tramite debe completar el siguiente formulario
+            Para iniciar un reclamo debera proporcionar los siguientes datos
           </p>
-          <form class="formulary" action="#">
-            <label for="name">
-              Nombre
-              <input id="name" type="text" placeholder="Ingrese su nombre" />
-            </label>
-            <label for="lastName">
-              Apellido
+
+          <form class="form_reclamo" action="#">
+            <label for="tramite">
+              Ingrese el numero de tramite
               <input
-                id="lastName"
-                type="text"
-                placeholder="Ingrese su apellido"
+                class="seach__input"
+                id="tramite"
+                type="number"
+                placeholder="Ingrese numero de tramite"
+                min="0"
               />
             </label>
-            <label for="dni">
-              DNI
-              <input id="dni" type="number" placeholder="Ingrese su DNI" />
-            </label>
-            <label for="enrollment">
-              Matricula
-              <input
-                id="enrollment"
-                type="text"
-                placeholder="Ingrese su matricula"
-              />
-            </label>
-            <label for="career">
-              Carrera
-              <select name="career" id="career">
-                <option value="" disabled selected>Ingrese una carrera</option>
-                <option value="eisi">Ingenieria en sistemas</option>
-                <option value="elsi">Licenciatura en sistemas</option>
-                <option value="etui">
-                  Tecnicatura universitaria en sistemas
-                </option>
-              </select>
-            </label>
-            <label for="university">
-              Universidad
-              <input
-                id="university"
-                type="text"
-                placeholder="Ingrese la universidad"
-              />
-            </label>
-            <input type="submit" id="enviar" value="Enviar" />
+            <input class="seach__btn" type="submit" id="seach" value="Buscar" />
           </form>
+
+          <section class="results">
+            <div class="results__list">
+              <h1>Lista de tramites en procesos</h1>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Tramite N°</th>
+                    <th>Estado tramite</th>
+                    <th>Seleccionar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>01</td>
+                    <td>Pendiente</td>
+                    <td><input type="checkbox" /></td>
+                  </tr>
+                  <tr class="active">
+                    <td>02</td>
+                    <td>Finalizado</td>
+                    <td><input type="checkbox" /></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <form action="">
+              <input
+                type="textarea"
+                placeholder="Ingrese detalles del reclamo"
+              />
+              <button type="button">Enviar reclamo</button>
+            </form>
+          </section>
         </div>
         <footer class="footer">
           <p class="title__footer">Copyrigth Seminario 2®</p>
