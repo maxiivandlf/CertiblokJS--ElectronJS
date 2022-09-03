@@ -4,48 +4,62 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hola</title>
+    <link rel="stylesheet" href="../../styles/globales.css" />
+    <title>Tramites Alumnos</title>
   </head>
   <body>
     <main class="container">
       <nav class="navbar">
         <ul class="navbar__links">
           <li class="link">
-            <ion-icon name="home-outline"></ion-icon>
-            <a href="alumnosInicio.html">Inicio</a>
+            <a href="./alumnosInicio.html">
+              <ion-icon name="home-outline"></ion-icon>
+              <span>Inicio</span>
+            </a>
           </li>
           <li class="link">
-            <ion-icon name="ribbon-outline"></ion-icon>
-            <a href="alumnosTramites.html">Iniciar tramite</a>
+            <a href="./alumnosTramites.html">
+              <ion-icon name="ribbon-outline"></ion-icon>
+              <span>Iniciar tramite</span></a
+            >
           </li>
           <li class="link">
-            <ion-icon name="footsteps-outline"></ion-icon>
-            <a href="">Seguimiento</a>
+            <a href="./alumnosSeguimiento.html">
+              <ion-icon name="footsteps-outline"></ion-icon>
+              <span>Seguimiento</span>
+            </a>
           </li>
           <li class="link">
-            <ion-icon name="mail-outline"></ion-icon>
-            <a href="">Reclamos</a>
+            <a href="">
+              <ion-icon name="mail-outline"></ion-icon>
+              <span>Reclamos</span>
+            </a>
           </li>
         </ul>
       </nav>
       <section class="content">
-        <head class="header">
-          <div class="header__logo">
-            <h1 class="logo">Sistema de certificados</h1>
-            <span class="logo__sub">Basado en blockchain</span>
+        <header class="header">
+          <div class="logo">
+            <h1 class="logo__title">Sistema de certificados</h1>
+            <span class="logo__subtitle">Basado en blockchain</span>
           </div>
-          <div class="header">
-            <div class="header__user">
-              <picture class="user_img">
-                <img src="" alt="Usuario" />
-              </picture>
-              <span>Usuario</span>
-            </div>
-            <button type="button">
-              <ion-icon name="exit-outline"></ion-icon>
-            </button>
+          <div class="user">
+            <picture>
+              <img
+                class="user_img"
+                src="../../assets/users/profile.png"
+                alt="Usuario"
+              />
+            </picture>
+            <span class="user_text">Usuario</span>
+
+            <a href="../login.html">
+              <button class="user_exit" type="button">
+                <ion-icon name="exit-outline"></ion-icon>
+              </button>
+            </a>
           </div>
-        </head>
+        </header>
         <div class="section__formulary">
           <h2>Bienvenidos</h2>
           <p>
