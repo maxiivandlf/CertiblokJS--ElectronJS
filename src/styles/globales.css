@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --backgraund: #1f1f1f;
+  --backgraund_footer: rgba(217, 217, 217, 0.09);
+  --navbar: rgba(43, 174, 203, 0.4);
+  --texto_menus: #ffffff;
+  --boton_activo: #5acad9;
+  --boton_inactivo: #415659;
+  --font_color: #ffffff;
+  --cuadro_de_datos: rgba(217, 217, 217, 0.6);
+  --fontFamly: 'Lato', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: var(--fontFamly);
+  color: var(--font_color);
+}
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: var(--backgraund);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  max-width: 1200px;
+}
+
+.navbar {
+  padding: 30px;
+  height: 100vh;
+  width: 230px;
+  background: var(--navbar);
+  border-top-left-radius: 15px;
+}
+
+.navbar_links {
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.link {
+  padding-bottom: 20px;
+}
+.link a {
+  height: 50px;
+  display: flex;
+  width: 200px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 20px;
+  color: var(--font_color);
+  align-items: center;
+}
+.link a ion-icon {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.link a span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* SECCION DE CONTENT*/
+
+.content {
+  width: 970px;
+}
+
+/**header**/
+.header {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  border-top-right-radius: 15px;
+  background-color: var(--boton_inactivo);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--texto_menus);
+  padding: 10px;
+  border-radius: 15px;
+  margin-left: 15px;
+  color: var(--font_color);
+  text-align: center;
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 160px;
+  margin-right: 20px;
+}
+.user_img {
+  width: 32px;
+}
+
+.user_text {
+  font-size: 1rem;
+}
+
+.user_exit {
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+}
