@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../styles/globales.css">
+
+
+</head>
+
+<body>
+  <main class="container">
+    <nav class="navbar">
+      <ul class="navbar__links">
+        <li class="link">
+          <a href="./universidadInicio.html">
+            <ion-icon name="home-outline"></ion-icon>
+            <span>Inicio</span>
+          </a>
+        </li>
+        <li class="link">
+          <a href="./universidadValidacion.html">
+            <ion-icon name="mail-outline"></ion-icon>
+            <span>Validaciones Pendientes</span></a
+          >
+        </li>
+        <li class="link">
+          <a href="./universidadConfeccion.html">
+            <ion-icon name="footsteps-outline"></ion-icon>
+            <span>Confecciones</span>
+          </a>
+        </li>
+        <li class="link">
+          <a href="./universidadSello.html">
+            <ion-icon name="ribbon-outline"></ion-icon>
+            <span>Sello</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section class="content">
+      <header class="header">
+        <div class="logo">
+          <h1 class="logo__title">Sistema de certificados</h1>
+          <span class="logo__subtitle">Basado en blockchain</span>
+        </div>
+        <div class="user">
+          <picture>
+            <img
+              class="user_img"
+              src="../../assets/users/school.png"
+              alt="Usuario"
+            />
+          </picture>
+          <span class="user_text">Usuario</span>
+
+          <a href="../login.html">
+            <button class="user_exit" type="button">
+              <ion-icon name="exit-outline"></ion-icon>
+            </button>
+          </a>
+        </div>
+      </header>
+
+      <div class="formulary">
+        <h2>Validaciones</h2>
+
+        <form class="seach" action="#">
+          <label for="tramite">
+            
+            <input
+              class="seach__input"
+              id="tramite"
+              type="number"
+              placeholder="Buscar tramites"
+              min="0"
+            />
+          </label>
+
+          <input
+            class="seach__btn"
+            type="submit"
+            id="enviar"
+            value="Enviar"
+          />
+        </form>
+        <section class="results">
+          <div class="results__list">
+            <h1>Lista de validaciones pendientes</h1>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Fecha de inicio</th>
+                  <th>Estado</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>Sam David</td>
+                  <td>Figton</td>
+                  <td>03-24-22</td>
+                  <td>Pendiente</td>
+                  <td><button>View</button></td>
+                </tr>
+                <tr class="active">
+                  <td>02</td>
+                  <td>Balbina Kherr</td>
+                  <td>Coding</td>
+                  <td>03-24-22</td>
+                  <td>Pendiente</td>
+                  <td><button>View</button></td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td>Badan John</td>
+                  <td>testing</td>
+                  <td>03-24-22</td>
+                  <td>Validando...</td>
+                  <td><button>View</button></td>
+                </tr>
+                <tr>
+                  <td>04</td>
+                  <td>Sara David</td>
+                  <td>Design</td>
+                  <td>03-24-22</td>
+                  <td>Finalizado</td>
+                  <td><button>View</button></td>
+                </tr>
+
+              </tbody>
+            
+            </table>
+            <input class="buttons" type="submit" name="" value="Validar materias">
+<!-- IMPORTANTE** action de abajo tiene una direccion ficticia por el momento, modificar despues -->
+            <form action="../layout_ministerio/ministerioValidacion.html" class="validacionEnviar">
+                <input class="buttons" type="submit" name="" value="Enviar solicitud">
+            </form>
+ 
+          </div>
+        </section>
+      </div>
+      
+      <footer class="footer">
+        <p class="title__footer">Copyrigth Seminario 2®</p>
+      </footer>
+    </section>
+  </main>
+
+
+
+</body>
+</html>
