@@ -3,10 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../../styles/globales.css">
-
-
 </head>
-
 <body>
   <main class="container">
     <nav class="navbar">
@@ -60,29 +57,8 @@
           </a>
         </div>
       </header>
-
-      <div class="formulary">
-        <h2>Confecciones</h2>
-
-        <form class="seach" action="#">
-          <label for="tramite">
-            
-            <input
-              class="seach__input"
-              id="tramite"
-              type="number"
-              placeholder="Buscar tramites"
-              min="0"
-            />
-          </label>
-
-          <input
-            class="seach__btn"
-            type="submit"
-            id="enviar"
-            value="Enviar"
-          />
-        </form>
+      <div class="content__confeccion">
+        <h2>Confecciones</h2>       
         <section class="results">
           <div class="results__list">
             <h1>Lista de tramites en procesos</h1>
@@ -134,23 +110,16 @@
             </table>
           </div>
         </section>
+        <div class="pdfViewer">                
+        </div>
+        <button class="btn__enviar" id="btn__generarpdf">Generar PDF y Enviar</button>
       </div>
-IMPORTANTE** visualizador del pdf, discutir si implementarlo es factible o demasiado trabajo
-      <div class="pdfViewer">
-        <embed src= "C:\Users\Ghost\Desktop\Facultad\2do Año\Analisis II\tabla-de-derivadas-e-integrales.pdf" width= "500" height= "375">
-      </div>
-<!-- IMPORTANTE** action de abajo tiene una direccion ficticia por el momento, modificar despues -->
-      <form action="../layout_ministerio/ministerioValidacionTitulo.html" class="validacionEnviar__confeccion">
-        <input class="buttons" type="submit" name="" value="Generar PDF y Enviar">
-      </form>
-      
       <footer class="footer">
         <p class="title__footer">Copyrigth Seminario 2®</p>
       </footer>
     </section>
   </main>
-
-
-
+ <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
