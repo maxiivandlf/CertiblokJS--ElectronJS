@@ -10,7 +10,7 @@ const createWindow = () => {
     },
   });
 
-  win.loadFile('./src/layout/layout_alumno/alumnosInicio.html');
+  win.loadFile('./src/layout/layout_universidad/universidadInicio.html');
 };
 
 app.whenReady().then(() => {

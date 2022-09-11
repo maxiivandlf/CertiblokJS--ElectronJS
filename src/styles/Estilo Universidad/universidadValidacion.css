@@ -1,0 +1,69 @@
+.content__validacion {
+    display: flex;
+    margin: 50px auto;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+}
+
+.seach {
+    margin: 50px auto;
+
+}
+
+.seach__input {
+    width: 750px;
+    height: 35px;
+    cursor: pointer;
+    margin-bottom: 16px;
+    border-radius: 15px;
+}
+
+.seach__btn {
+    background-color: var(--boton_activo);
+    width: 144px;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 16px;
+    border-radius: 15px;
+    margin-left: 50px;
+}
+
+.table, th, td {
+    text-align: center;
+    margin: 50px auto;
+    border: 1px solid;
+    width: 100vh;   
+}
+
+.btn__view {
+    background-color: var(--boton_activo);
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 16px;
+    border-radius: 15px;
+}
+
+.btn__validar {
+    width: 200px;
+    height: 40px;
+    background-color: var(--boton_activo);
+    border: none;
+    color: var(--Texto_menus);
+    margin-bottom: 16px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.btn__enviar {
+    width: 170px;
+    height: 40px;
+    background-color: var(--boton_activo);
+    border: none;
+    color: var(--Texto_menus);
+    margin-bottom: 16px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+

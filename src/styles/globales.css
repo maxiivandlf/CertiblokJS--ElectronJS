@@ -124,3 +124,15 @@ body {
   font-size: 2rem;
   cursor: pointer;
 }
+
+.blur {
+  height: 100%;
+  background-color: rgba(5, 5, 8, 0.846);
+}
+
+.footer {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  align-items: flex-end;
+}
