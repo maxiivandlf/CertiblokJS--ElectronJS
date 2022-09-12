@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../styles/globales.css" />
+    <link
+      rel="stylesheet"
+      href="../../styles/stylesalumnos/globalAlumnos.css"
+    />
+
     <title>Seguimiento de tramites</title>
   </head>
   <body>
@@ -38,111 +43,142 @@
         </ul>
       </nav>
       <section class="content">
-        <header class="header">
-          <div class="logo">
-            <h1 class="logo__title">Sistema de certificados</h1>
-            <span class="logo__subtitle">Basado en blockchain</span>
-          </div>
-          <div class="user">
-            <picture>
-              <img
-                class="user_img"
-                src="../../assets/users/profile.png"
-                alt="Usuario"
-              />
-            </picture>
-            <span class="user_text">Usuario</span>
+        <div class="blur">
+          <header class="header">
+            <div class="logo">
+              <h1 class="logo__title">Sistema de certificados</h1>
+              <span class="logo__subtitle">Basado en blockchain</span>
+            </div>
+            <div class="user">
+              <picture>
+                <img
+                  class="user_img"
+                  src="../../assets/users/profile.png"
+                  alt="Usuario"
+                />
+              </picture>
+              <span class="user_text">Usuario</span>
 
-            <a href="../login.html">
-              <button class="user_exit" type="button">
-                <ion-icon name="exit-outline"></ion-icon>
-              </button>
-            </a>
-          </div>
-        </header>
+              <a href="../login.html">
+                <button class="user_exit" type="button">
+                  <ion-icon name="exit-outline"></ion-icon>
+                </button>
+              </a>
+            </div>
+          </header>
 
-        <div class="formulary">
-          <h2>Seguimiento de tramites</h2>
+          <div class="section_principal">
+            <h2 class="title__principal">Seguimiento de tramites</h2>
 
-          <form class="seach" action="#">
-            <label for="tramite">
-              Ingrese el numero de tramite
-              <input
-                class="seach__input"
-                id="tramite"
-                type="number"
-                placeholder="Ingrese numero de tramite"
-                min="0"
-              />
-            </label>
+            <form class="formulary__seach" action="./alumnosInicio.html">
+              <label class="label_seach" for="tramite">
+                Ingrese el numero de tramite
+              </label>
+              <div>
+                <input
+                  class="seach__input"
+                  id="input_tramite"
+                  type="text"
+                  placeholder="Ingrese numero de tramite"
+                  min="0"
+                />
 
-            <input
-              class="seach__btn"
-              type="submit"
-              id="enviar"
-              value="Enviar"
-            />
-          </form>
-          <section class="results">
-            <div class="results__list">
-              <h1>Lista de tramites en procesos</h1>
+                <input
+                  class="seach__btn"
+                  type="submit"
+                  id="buscarTramite"
+                  value="Buscar tramite"
+                />
+              </div>
+            </form>
+            <section class="results">
+              <h1 class="results__title">Lista de tramites en procesos</h1>
               <table class="table">
-                <thead>
+                <thead class="table__head">
                   <tr>
-                    <th>ID</th>
+                    <th>N° Tramite</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Fecha de inicio</th>
-                    <th>Universida</th>
+                    <th>Universidad</th>
                     <th>Estado</th>
                     <th>Details</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>01</td>
+                <tbody class="table__body" id="tableBody">
+                  <tr class="fila">
+                    <td id="id">01</td>
                     <td>Sam David</td>
                     <td>Figton</td>
                     <td>03-24-22</td>
-                    <td>8:00AM</td>
-                    <td>3:00PM</td>
-                    <td><button>View</button></td>
+                    <td>UNLAR</td>
+                    <td>EN PROCESO</td>
+                    <td>
+                      <button class="btn_view" id="btn_viewSeguimiento">
+                        View
+                      </button>
+                    </td>
                   </tr>
-                  <tr class="active">
-                    <td>02</td>
+                  <tr class="fila">
+                    <td id="id">02</td>
                     <td>Balbina Kherr</td>
                     <td>Coding</td>
                     <td>03-24-22</td>
-                    <td>9:00AM</td>
-                    <td>4:00PM</td>
-                    <td><button>View</button></td>
+                    <td>UTN</td>
+                    <td>EN REVISION</td>
+                    <td>
+                      <button class="btn_view" id="btn_viewSeguimiento">
+                        View
+                      </button>
+                    </td>
                   </tr>
-                  <tr>
-                    <td>03</td>
-                    <td>Badan John</td>
-                    <td>testing</td>
+                  <tr class="fila">
+                    <td id="id">02</td>
+                    <td>Balbina Kherr</td>
+                    <td>Coding</td>
                     <td>03-24-22</td>
-                    <td>8:00AM</td>
-                    <td>3:00PM</td>
-                    <td><button>View</button></td>
+                    <td>UTN</td>
+                    <td>EN REVISION</td>
+                    <td>
+                      <button class="btn_view" id="btn_viewSeguimiento">
+                        View
+                      </button>
+                    </td>
                   </tr>
-                  <tr>
-                    <td>04</td>
-                    <td>Sara David</td>
-                    <td>Design</td>
+                  <tr class="fila">
+                    <td id="id">02</td>
+                    <td>Balbina Kherr</td>
+                    <td>Coding</td>
                     <td>03-24-22</td>
-                    <td>8:00AM</td>
-                    <td>3:00PM</td>
-                    <td><button>View</button></td>
+                    <td>UTN</td>
+                    <td>EN REVISION</td>
+                    <td>
+                      <button class="btn_view" id="btn_viewSeguimiento">
+                        View
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="fila">
+                    <td id="id">02</td>
+                    <td>Balbina Kherr</td>
+                    <td>Coding</td>
+                    <td>03-24-22</td>
+                    <td>UTN</td>
+                    <td>EN REVISION</td>
+                    <td>
+                      <button class="btn_view" id="btn_viewSeguimiento">
+                        View
+                      </button>
+                    </td>
                   </tr>
                 </tbody>
               </table>
-            </div>
-          </section>
+            </section>
+          </div>
+          <footer class="footer">
+            <p class="title__footer">Copyrigth Seminario 2®</p>
+          </footer>
         </div>
-        <footer class="footer">
-          <p class="title__footer">Copyrigth Seminario 2®</p>
-        </footer>
       </section>
     </main>
 
@@ -154,5 +190,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script src="../../app/app.js"></script>
   </body>
 </html>

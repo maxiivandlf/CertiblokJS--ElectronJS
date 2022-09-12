@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 :root {
-  --backgraund: #1f1f1f;
+  --background: #1f1f1f;
   --backgraund_footer: rgba(217, 217, 217, 0.09);
   --navbar: rgba(43, 174, 203, 0.4);
   --texto_menus: #ffffff;
@@ -15,7 +15,6 @@
 * {
   margin: 0;
   padding: 0;
-  outline: none;
   border: none;
   text-decoration: none;
   box-sizing: border-box;
@@ -27,7 +26,7 @@ ul {
 }
 
 body {
-  background-color: var(--backgraund);
+  background-color: var(--background);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -77,9 +76,16 @@ body {
 }
 
 /* SECCION DE CONTENT*/
-
 .content {
+  background-image: url(../img/FondoAlumnos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 970px;
+}
+.blur {
+  height: 100%;
+  background-color: rgba(5, 5, 8, 0.846);
+  /* backdrop-filter: blur(10px); */
 }
 
 /**header**/
@@ -123,4 +129,11 @@ body {
   background-color: transparent;
   font-size: 2rem;
   cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding-left: 20px;
 }

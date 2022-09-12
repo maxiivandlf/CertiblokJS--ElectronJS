@@ -3,27 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <title>Login</title>
-    <link rel="stylesheet" href="../styles/style.css" />
+    <!-- <link rel="stylesheet" href="../styles/login/login.css" /> -->
   </head>
   <body>
-    <form action="./layout_alumno/alumnosInicio.html" class="form-login">
-      <h5>Formulario Login</h5>
-      <input
-        class="controls"
-        type="text"
-        name="usuario"
-        value=""
-        placeholder="Usuario"
-      />
-      <input
-        class="controls"
-        type="password"
-        name="contraseña"
-        value=""
-        placeholder="Contraseña"
-      />
-      <input class="buttons" type="submit" name="" value="Ingresar" />
-      <p><a href="#">¿Olvitaste tu Contraseña?</a></p>
-    </form>
+    <div class="header">
+      <div class="logo">
+        <h2 class="logo__title">Sistema de Certificados</h2>
+        <p class="logo__subtitle">Basado en Blockchain</p>
+      </div>
+    </div>
+    <div>
+      <form class="login" id="formLogin">
+        <h2 class="login__title">Ingrese al Sistema</h2>
+        <input
+          class="login__input"
+          type="text"
+          name="usuario"
+          id="usuario"
+          value=""
+          placeholder="Usuario"
+        />
+        <input
+          class="login__input"
+          type="password"
+          name="contraseña"
+          id="contraseña"
+          value=""
+          placeholder="Contraseña"
+        />
+        <input
+          class="login__buttons"
+          id="btnIngesar"
+          type="submit"
+          name=""
+          value="Ingresar"
+        />
+        <input
+          class="login__buttons login__buttons--secondary"
+          type="submit"
+          name=""
+          value="Registrarse"
+        />
+        <h2 class="login__subtitle">Seleccione su categoria</h2>
+        <select class="login__buttons" name="categoria" id="categoria">
+          <option value="estudiantil">Estudiantil</option>
+          <option value="universidad">Universidad</option>
+          <option value="ministerio">Ministerio</option>
+        </select>
+        <p class="login__text"><a href="#">¿Olvitaste tu Contraseña?</a></p>
+      </form>
+    </div>
+    <script src="../app/login.js"></script>
   </body>
 </html>
