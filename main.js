@@ -6,16 +6,12 @@ const createWindow = () => {
     width: 1200,
     height: 1000,
     webPreferences: {
-      preload: path.join(__dirname, './src/app/preload.js'),
+      nodeIntegration: true,
     },
   });
 
-  win.loadFile('./src/layout/layout_universidad/universidadInicio.html');
+  win.loadFile('./src/layout/login.html');
 };
-
-app.whenReady().then(() => {
-  createWindow();
-});
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
