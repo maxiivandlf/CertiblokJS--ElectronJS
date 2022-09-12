@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../styles/globales.css" />
+    <link
+      rel="stylesheet"
+      href="../../styles/stylesalumnos/globalAlumnos.css"
+    />
     <title>Reclamos</title>
   </head>
   <body>
@@ -38,86 +42,100 @@
         </ul>
       </nav>
       <section class="content">
-        <header class="header">
-          <div class="logo">
-            <h1 class="logo__title">Sistema de certificados</h1>
-            <span class="logo__subtitle">Basado en blockchain</span>
-          </div>
-          <div class="user">
-            <picture>
-              <img
-                class="user_img"
-                src="../../assets/users/profile.png"
-                alt="Usuario"
-              />
-            </picture>
-            <span class="user_text">Usuario</span>
-
-            <a href="../login.html">
-              <button class="user_exit" type="button">
-                <ion-icon name="exit-outline"></ion-icon>
-              </button>
-            </a>
-          </div>
-        </header>
-
-        <div class="formulary">
-          <h2>Gestion de reclamos</h2>
-          <p>
-            Para iniciar un reclamo debera proporcionar los siguientes datos
-          </p>
-
-          <form class="form_reclamo" action="#">
-            <label for="tramite">
-              Ingrese el numero de tramite
-              <input
-                class="seach__input"
-                id="tramite"
-                type="number"
-                placeholder="Ingrese numero de tramite"
-                min="0"
-              />
-            </label>
-            <input class="seach__btn" type="submit" id="seach" value="Buscar" />
-          </form>
-
-          <section class="results">
-            <div class="results__list">
-              <h1>Lista de tramites en procesos</h1>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Tramite N°</th>
-                    <th>Estado tramite</th>
-                    <th>Seleccionar</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>01</td>
-                    <td>Pendiente</td>
-                    <td><input type="checkbox" /></td>
-                  </tr>
-                  <tr class="active">
-                    <td>02</td>
-                    <td>Finalizado</td>
-                    <td><input type="checkbox" /></td>
-                  </tr>
-                </tbody>
-              </table>
+        <div class="blur">
+          <header class="header">
+            <div class="logo">
+              <h1 class="logo__title">Sistema de certificados</h1>
+              <span class="logo__subtitle">Basado en blockchain</span>
             </div>
-            <form action="">
-              <input
-                type="textarea"
-                placeholder="Ingrese detalles del reclamo"
-              />
-              <button type="button">Enviar reclamo</button>
+            <div class="user">
+              <picture>
+                <img
+                  class="user_img"
+                  src="../../assets/users/profile.png"
+                  alt="Usuario"
+                />
+              </picture>
+              <span class="user_text">Usuario</span>
+
+              <a href="../login.html">
+                <button class="user_exit" type="button">
+                  <ion-icon name="exit-outline"></ion-icon>
+                </button>
+              </a>
+            </div>
+          </header>
+
+          <div class="section_principal">
+            <h2 class="title__principal">Gestion de reclamos</h2>
+            <p class="description">
+              Para iniciar un reclamo debera proporcionar los siguientes datos
+            </p>
+
+            <form class="formulary__seach">
+              <label class="label_seach" for="tramite">
+                Ingrese el numero de tramite
+              </label>
+              <div>
+                <input
+                  class="seach__input"
+                  id="tramite"
+                  type="text"
+                  placeholder="Ingrese numero de tramite"
+                  min="0"
+                />
+                <input
+                  class="seach__btn"
+                  type="submit"
+                  id="seachReclamo"
+                  value="Buscar reclamo"
+                />
+              </div>
             </form>
-          </section>
+
+            <section class="section__results">
+              <section class="results">
+                <h1 class="results__title">Lista de tramites en procesos</h1>
+                <table class="table">
+                  <thead class="table__head">
+                    <tr>
+                      <th>N° Tramite</th>
+                      <th>Estado Tramite</th>
+                      <th>Seleccionar</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__body" id="tableBody">
+                    <tr class="fila">
+                      <td id="id">01</td>
+                      <td>EN PROCESO</td>
+                      <td><input type="checkbox" name="" id="" /></td>
+                    </tr>
+                    <tr class="fila">
+                      <td id="id">02</td>
+                      <td>COMPLETADO</td>
+                      <td><input type="checkbox" name="" id="" /></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+              <form class="form_textArea" action="">
+                <textarea
+                  class="info__reclamo"
+                  name="info__reclamo"
+                  id="info__reclamo"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+                <button class="reclamo__btn" type="button">
+                  Enviar reclamo
+                </button>
+              </form>
+            </section>
+          </div>
+          <footer class="footer">
+            <p class="title__footer">Copyrigth Seminario 2®</p>
+          </footer>
         </div>
-        <footer class="footer">
-          <p class="title__footer">Copyrigth Seminario 2®</p>
-        </footer>
       </section>
     </main>
 
