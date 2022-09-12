@@ -9,8 +9,8 @@ const createWindow = () => {
       nodeIntegration: true,
     },
   });
+win.loadFile('./src/layout/login.html');
 
-  win.loadFile('./src/layout/login.html');
 };
 
 app.on('window-all-closed', () => {

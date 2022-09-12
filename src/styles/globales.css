@@ -131,9 +131,15 @@ body {
   cursor: pointer;
 }
 
+.blur {
+  height: 100%;
+  background-color: rgba(5, 5, 8, 0.846);
+}
+
 .footer {
   display: flex;
   align-items: center;
   height: 60px;
   padding-left: 20px;
 }
+
