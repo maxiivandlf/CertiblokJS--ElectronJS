@@ -74,6 +74,7 @@
 
 .table__head {
   background-color: var(--boton_inactivo);
+  padding: 50px;
 }
 .fila,
 th {

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../../styles/globales.css">
+    <link href="../../styles/stylesMinisterio/GlobalMinisterio.css" rel="stylesheet" type="text/css" />
+
+    <title>Ministerio de educación</title>
+  </head>
+  <body>
+    <main class="container">
+      <nav class="navbar">
+        <ul class="navbar__links">
+          <li class="link">
+            <a href="./ministerioInicio.html">
+              <ion-icon name="home-outline"></ion-icon>
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li class="link">
+            <a href="./ministeriolista.html">
+              <ion-icon name="ribbon-outline"></ion-icon>
+              <span>Analiticos a validar</span></a>
+          </li>
+            <li class="link">
+              <a href="./ministeriolistasaprob.html">
+                <ion-icon name="school-outline"></ion-icon>
+                <span>Generar Oblea</span></a>
+            </li>
+          </li>
+          <li class="link">
+            <a href="./ministerioValidacion.html">
+              <ion-icon name="footsteps-outline"></ion-icon>
+              <span>Confirmacion PDF</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="content">
+        <div class="blur">
+          <header class="header">
+            <div class="logo">
+              <h1 class="logo__title">Sistema de certificados</h1>
+              <span class="logo__subtitle">Basado en blockchain</span>
+            </div>
+            <div class="user">
+              <picture>
+                <img
+                  class="user_img"
+                  src="../../assets/users/government.png"
+                  alt="Usuario"
+                />
+              </picture>
+              <span class="user_text">Usuario</span>
+
+              <a href="../login.html">
+                <button class="user_exit" type="button">
+                  <ion-icon name="exit-outline"></ion-icon>
+                </button>
+              </a>
+            </div>
+          </header>
+          <div class="section_tabla">
+            <div class="bienvenida">
+              <h2>Analiticos a Validar</h2>
+            </div>
+          <section class="results">
+              <table class="table">
+                <thead class="table__head">
+                  <tr>
+                    <th>ID</th>
+                    <th>Nombre y Apellido</th>
+                    <th>Dni</th>
+                    <th>Detalles</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>01</td>
+                    <td>Lautaro Coria</td>
+                    <td>41047064</td>
+                    <td><button class="btn_details" id="btn_details">View</button></td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>Juan Perez</td>
+                    <td>22587266</td>
+                    <td><button class="btn_details" id="btn_details">View</button></td>
+                  </tr>
+                  <tr>
+                    <td>02</td>
+                    <td>Maria Reyes</td>
+                    <td>28027266</td>
+                    <td><button class="btn_details" id="btn_details">View</button></td>
+                  </tr>
+                </tbody>
+              </table>
+          </section>
+          <button class="btn_view" id="btn_validar">Validar</button>
+          
+        </div>
+          <footer class="footer">
+            <p class="title__footer">Copyrigth Seminario 2®</p>
+          </footer>
+        </div>
+
+      </section>
+      <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>

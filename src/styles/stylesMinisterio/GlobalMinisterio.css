@@ -1,0 +1,177 @@
+
+:root {
+    --backgraund: #1f1f1f;
+    --backgraund_footer: rgba(217, 217, 217, 0.09);
+    --navbar: rgba(43, 174, 203, 0.4);
+    --texto_menus: #ffffff;
+    --boton_activo: #5acad9;
+    --boton_inactivo: #415659;
+    --font_color: #ffffff;
+    --cuadro_de_datos: rgba(217, 217, 217, 0.6);
+    --fontFamly: 'Lato', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: var(--fontFamly);
+    color: var(--font_color);
+  }
+  ul {
+    list-style: none;
+  }
+  
+  body {
+    background-color: var(--backgraund);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+    max-width: 1200px;
+  }
+  
+  .navbar {
+    padding: 30px;
+    height: 100vh;
+    width: 230px;
+    background: var(--navbar);
+    border-top-left-radius: 15px;
+  }
+  
+  .navbar_links {
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .link {
+    padding-bottom: 20px;
+  }
+  .link a {
+    height: 50px;
+    display: flex;
+    width: 200px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 20px;
+    color: var(--font_color);
+    align-items: center;
+  }
+  .link a ion-icon {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .link a span {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+/*Content*/
+  .content {
+    background-image: url(../../img/FondoMinisterio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;}
+    .blur {
+      height: 100%;
+      background-color: rgba(5, 5, 8, 0.846);
+    }
+  .content {
+  width: 970px;
+  }
+  .bienvenida{
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    margin: 1em auto;
+    padding: 10px;
+  }
+  
+  .table {
+    background-color: var(--cuadro_de_datos);
+    width: 90%;
+    padding: 25px;
+    border-radius: 15px;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  .table__head {
+    background-color: var(--boton_inactivo);
+    height: 25px;
+  }
+  th {
+    height: 40px;
+  }
+
+  .btn_view {
+    padding: 0.5rem 1rem;
+    width: 20%;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: var(--boton_activo);
+    margin-top: 5%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .btn_details {
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: var(--boton_activo);
+  }
+
+  .footer{
+    margin-top: 30%;
+    text-align: left;
+  }
+
+  /**header**/
+.header {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    border-top-right-radius: 15px;
+    background-color: var(--boton_inactivo);
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--texto_menus);
+    padding: 10px;
+    border-radius: 15px;
+    margin-left: 15px;
+    color: var(--font_color);
+    text-align: center;
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 160px;
+    margin-right: 20px;
+  }
+  .user_img {
+    width: 32px;
+  }
+  
+  .user_text {
+    font-size: 1rem;
+  }
+  
+  .user_exit {
+    background-color: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+

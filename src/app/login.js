@@ -9,7 +9,7 @@ formLogin.addEventListener('submit', (e) => {
   if (categoria.value === 'universidad') {
     location = './layout_universidad/universidadInicio.html';
   } else if (categoria.value === 'ministerio') {
-    alert('HOLA MINISTERIO');
+    location = './layoutministerio/ministerioInicio.html';
   } else {
     location = './layout_alumno/alumnosInicio.html';
   }
