@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../styles/globales.css" />
+    <link
+      rel="stylesheet"
+      href="../../styles/stylesalumnos/globalAlumnos.css"
+    />
     <title>Tramites Alumnos</title>
   </head>
   <body>
@@ -38,60 +42,53 @@
         </ul>
       </nav>
       <section class="content">
-        <header class="header">
-          <div class="logo">
-            <h1 class="logo__title">Sistema de certificados</h1>
-            <span class="logo__subtitle">Basado en blockchain</span>
-          </div>
-          <div class="user">
-            <picture>
-              <img
-                class="user_img"
-                src="../../assets/users/profile.png"
-                alt="Usuario"
-              />
-            </picture>
-            <span class="user_text">Usuario</span>
+        <div class="blur">
+          <header class="header">
+            <div class="logo">
+              <h1 class="logo__title">Sistema de certificados</h1>
+              <span class="logo__subtitle">Basado en blockchain</span>
+            </div>
+            <div class="user">
+              <picture>
+                <img
+                  class="user_img"
+                  src="../../assets/users/profile.png"
+                  alt="Usuario"
+                />
+              </picture>
+              <span class="user_text">Usuario</span>
 
-            <a href="../login.html">
-              <button class="user_exit" type="button">
-                <ion-icon name="exit-outline"></ion-icon>
-              </button>
-            </a>
-          </div>
-        </header>
-        <div class="section__formulary">
-          <h2>Bienvenidos</h2>
-          <p>
-            Para iniciar un nuevo tramite debe completar el siguiente formulario
-          </p>
-          <form class="formulary" action="#">
-            <label for="name">
-              Nombre
+              <a href="../login.html">
+                <button class="user_exit" type="button">
+                  <ion-icon name="exit-outline"></ion-icon>
+                </button>
+              </a>
+            </div>
+          </header>
+          <div class="section_principal">
+            <h2 class="title__principal">Bienvenidos</h2>
+            <p class="description">
+              Para iniciar un nuevo tramite debe completar el siguiente
+              formulario
+            </p>
+            <form class="form__tramite">
+              <label for="name"> Nombre </label>
               <input id="name" type="text" placeholder="Ingrese su nombre" />
-            </label>
-            <label for="lastName">
-              Apellido
+              <label for="lastName"> Apellido </label>
               <input
                 id="lastName"
                 type="text"
                 placeholder="Ingrese su apellido"
               />
-            </label>
-            <label for="dni">
-              DNI
+              <label for="dni"> DNI </label>
               <input id="dni" type="number" placeholder="Ingrese su DNI" />
-            </label>
-            <label for="enrollment">
-              Matricula
+              <label for="enrollment"> Matricula </label>
               <input
                 id="enrollment"
                 type="text"
                 placeholder="Ingrese su matricula"
               />
-            </label>
-            <label for="career">
-              Carrera
+              <label for="career"> Carrera </label>
               <select name="career" id="career">
                 <option value="" disabled selected>Ingrese una carrera</option>
                 <option value="eisi">Ingenieria en sistemas</option>
@@ -100,21 +97,20 @@
                   Tecnicatura universitaria en sistemas
                 </option>
               </select>
-            </label>
-            <label for="university">
-              Universidad
+              <label for="university"> Universidad </label>
               <input
                 id="university"
                 type="text"
                 placeholder="Ingrese la universidad"
               />
-            </label>
-            <input type="submit" id="enviar" value="Enviar" />
-          </form>
+
+              <input type="submit" id="enviar" value="Enviar" />
+            </form>
+          </div>
+          <footer class="footer">
+            <p class="title__footer">Copyrigth Seminario 2®</p>
+          </footer>
         </div>
-        <footer class="footer">
-          <p class="title__footer">Copyrigth Seminario 2®</p>
-        </footer>
       </section>
     </main>
 

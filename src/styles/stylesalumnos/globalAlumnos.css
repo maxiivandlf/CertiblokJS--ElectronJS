@@ -1,0 +1,172 @@
+.section_principal {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.title__principal {
+  margin: 2rem auto;
+}
+
+.description {
+  margin-left: 4em;
+  margin-bottom: 2em;
+  text-align: left;
+}
+
+.formulary__seach {
+  left: 0;
+  width: 80%;
+  text-align: left;
+  margin-left: 4em;
+}
+
+.label_seach {
+  font-size: 1.2rem;
+}
+
+.seach__input {
+  margin: 20px auto;
+  width: 400px;
+  height: 2em;
+  border-radius: 15px;
+  text-align: justify;
+  padding-left: 15px;
+  color: black;
+  font-size: 1rem;
+}
+.seach__btn,
+.reclamo__btn {
+  padding: 10px 30px;
+  border-radius: 15px;
+  color: black;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.reclamo__btn {
+  margin-top: 20px;
+  margin-left: 0;
+}
+
+.seach__btn:hover,
+.reclamo__btn:hover {
+  scale: 1.1;
+  transition: 0.5s;
+}
+
+/*TABLA DE CONTENIDO */
+
+.results {
+  margin-left: 4em;
+}
+.results__title {
+  text-align: left;
+  margin: 1em auto;
+}
+.table {
+  background-color: var(--cuadro_de_datos);
+  width: 95%;
+  padding: 15px;
+  border-radius: 15px;
+  border-collapse: collapse;
+}
+
+.table__head {
+  background-color: var(--boton_inactivo);
+}
+.fila,
+th {
+  height: 40px;
+}
+.btn_view {
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: var(--boton_activo);
+}
+
+.active {
+  background-color: var(--boton_inactivo);
+}
+
+.fila:nth-child(even) {
+  background-color: rgb(95, 104, 126);
+}
+
+.form_textArea {
+  text-align: left;
+  margin: 2em 4em;
+}
+.info__reclamo {
+  width: 100%;
+  border-radius: 15px;
+  color: black;
+  padding: 5px;
+}
+/* INICIO */
+.section__inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 80vh;
+}
+
+.inicio__title {
+  margin: 2em auto;
+  font-size: 2rem;
+}
+.inicio__title--spam {
+  color: var(--boton_activo);
+}
+
+.inicio__userImage {
+  width: 200px;
+}
+.inicio__description {
+  margin: 2rem 0;
+}
+
+/*TRAMITES*/
+
+.form__tramite {
+  width: 80%;
+  text-align: left;
+  margin-left: 4em;
+  display: flex;
+  flex-direction: column;
+}
+.form__tramite label {
+  width: 3em;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.form__tramite input,
+select {
+  height: 2em;
+  width: 50%;
+  border-radius: 15px;
+  padding-left: 10px;
+}
+.form__tramite select {
+  color: black;
+}
+.form__tramite select option {
+  color: black;
+}
+#enviar {
+  text-align: center;
+  width: 8rem;
+  padding-left: 0px;
+  border-radius: 15px;
+  color: black;
+  margin-top: 2em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#enviar:hover {
+  scale: 1.1;
+  transition: 0.5s;
+}
