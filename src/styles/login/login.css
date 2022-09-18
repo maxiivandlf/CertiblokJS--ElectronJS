@@ -68,6 +68,25 @@ body {
   font-size: 32px;
 }
 
+.messgError {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 15px;
+  text-align: center;
+  margin: 10px auto;
+  height: 40px;
+  color: var(--Texto_menus);
+  background-color: palevioletred;
+  opacity: 0;
+  width: 50%;
+}
+.messgError ion-icon {
+  font-size: 1.5rem;
+}
+
 .login__input {
   width: 100%;
   border: 1px solid var(--Texto_menus);

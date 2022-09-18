@@ -4,7 +4,11 @@
   "description": "proyecto utilizando electron para la catedra seminario 2",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder",
+    "build-windows": "electron-builder -w",
+    "build-linux": "electron-builder -l",
+    "build-macos": "electron-builder -m"
   },
   "repository": {
     "type": "git",
@@ -17,9 +21,12 @@
   },
   "homepage": "https://github.com/maxiivandlf/seminario_2#readme",
   "devDependencies": {
-    "electron": "20.1.0"
+    "electron": "20.1.0",
+    "electron-builder": "^23.3.3"
   },
   "dependencies": {
-    "mongodb": "^4.9.1"
+    "electron-reload": "^2.0.0-alpha.1",
+    "mongodb": "^4.9.1",
+    "promise-mysql": "^5.2.0"
   }
 }
