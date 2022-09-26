@@ -25,7 +25,7 @@ btnIngesar.addEventListener('click', (e) => {
     } else if (validation.cat === 'Universidad') {
       location = './layout_universidad/universidadInicio.html';
     } else if (validation.cat === 'Ministerio') {
-      location = './layout_universidad/universidadInicio.html';
+      location = './layoutministerio/ministerioInicio.html';
     }
   });
 
