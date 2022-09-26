@@ -1,99 +1,91 @@
 :root {
-    --backgraund: #1f1f1f;
-    --backgraund_footer: #d9d9d9;
-    --Navbar: #2baecb;
-    --Texto_menus: #ffffff;
-    --boton_activo: #5acad9;
-    --boton_inactivo: #415659;
-    --Cuadro_de_datos: #d9d9d9;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: arial;
-    background-color: var(--backgraund);
-    height: 100vh;
-  }
-  
-  .header {
-    height: 50vh;
-    background-image: url('../../img/FondoInicio.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .logo {
-    border: 2px solid var(--Texto_menus);
-    padding: 10px;
-    border-radius: 15px;
-    text-align: center;
-  }
-  
-  .register__title {
-    font-size: 40px;
-    color: var(--Texto_menus);
-    padding: 10px;
-  }
-  
-  .login__title {
-    margin: 0;
-    text-align: center;
-    margin-bottom: 30px;
-    /* border-bottom: 1px solid; */
-    font-size: 32px;
-  }
-  
-  .register {
-    width: 50%;
-    border: 1px solid var(--Texto_menus);
-    margin-bottom: 15px;
-    padding: 11px 10px;
-    background: var(--backgraund);
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 10px;
-    color: var(--Texto_menus);
-    margin:  0 auto;
-  }
+  --background: #1f1f1f;
+  --backgraund_footer: rgba(217, 217, 217, 0.09);
+  --navbar: rgba(43, 174, 203, 0.4);
+  --texto_menus: #ffffff;
+  --boton_activo: #5acad9;
+  --boton_inactivo: #415659;
+  --font_color: #ffffff;
+  --cuadro_de_datos: rgba(217, 217, 217, 0.6);
+  --fontFamly: 'Lato', sans-serif;
+}
+* {
+  font-family: var(--fontFamly);
+}
+.header {
+  height: 40vh;
+  background-image: url('../../img/FondoInicio.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .registro{
-  width: 100%;
-  border: 1px solid var(--Texto_menus);
-  margin-bottom: 15px;
+.logo {
+  border: 2px solid var(--texto_menus);
+  padding: 10px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.register {
+  width: 500px;
   padding: 11px 10px;
-  background: var(--backgraund);
+  background: var(--background);
   font-size: 14px;
   font-weight: bold;
   border-radius: 10px;
-  }
-  
-  .category_user {
-    width: 15%;
-    height: 30px;
-    background-color: var(--boton_activo);
-    border: none;
-    color: var(--Texto_menus);
-    margin-bottom: 16px;
-    border-radius: 15px;
-    cursor: pointer;
-  }
+  color: var(--texto_menus);
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.register__title {
+  font-size: 40px;
+  color: var(--texto_menus);
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
 
-  .btn_register{
-    padding: 0.5rem 1rem;
-    border-radius: 15px;
-    cursor: pointer;
-    background-color: var(--boton_activo);
-    color: var(--Texto_menus);
-    
-  }
-  
- 
+.input__register {
+  width: 100%;
+  border: 1px solid var(--texto_menus);
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: var(--background);
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.category_user {
+  background-color: var(--boton_activo);
+  font-size: 20px;
+  color: var(--texto_menus);
+  margin: 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+.btn_register {
+  text-align: center;
+  width: 50%;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: var(--boton_activo);
+  color: var(--texto_menus);
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.btn_register:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
