@@ -11,7 +11,8 @@ buscarTramite.addEventListener('click', (e) => {
   }
   ipcRenderer.send('getProcedureId', input_tramite.value);
   ipcRenderer.on('idproced', (e, procedure) => {
-    tabla.innerHTML = `<tr class="fila" >
+    if (procedure.length !== 0) {
+      tabla.innerHTML = `<tr class="fila" >
     <td id="id">${procedure[0].id_procedure}</td>
     <td>${procedure[0].name}</td>
     <td>${procedure[0].lastName}</td>
@@ -26,6 +27,7 @@ buscarTramite.addEventListener('click', (e) => {
           </button>
     </td>
       </tr>`;
+    }
   });
 });
 ipcRenderer.send('getProcedures');

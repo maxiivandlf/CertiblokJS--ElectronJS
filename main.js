@@ -19,7 +19,7 @@ app.whenReady().then(() => {
   win.loadFile('./src/layout/login.html');
   win.maximize();
 
-  //obtiene datos del proceso render escuchando el evento usuario
+  // IPC ON obtiene datos del proceso render escuchando el evento usuario
 
   ipc.on('comUser', async (env, User) => {
     const validation = await userValidation(User);
@@ -47,12 +47,6 @@ app.whenReady().then(() => {
       body: 'El nuevo tramite fue agragado correctamente',
     }).show();
   });
-
-  // ipc.on('comUser', async () => {
-  //   //regresa los datos de la base
-  //   const dbdatos = await getUser();
-  //   win.webContents.send('datosdb', dbdatos);
-  // });
 });
 
 app.on('window-all-closed', () => {
