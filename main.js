@@ -6,6 +6,7 @@ const {
   dataProcedureID,
   dataProcedure,
 } = require('./src/utilities/getProcedures.js');
+const { newUserdb } = require('./src/utilities/dbNewUser');
 
 app.whenReady().then(() => {
   const win = new BrowserWindow({
@@ -47,6 +48,15 @@ app.whenReady().then(() => {
     new Notification({
       title: 'Nuevo tramite generado',
       body: 'El nuevo tramite fue agragado correctamente',
+    }).show();
+  });
+
+  //Crea nuevo usuario
+  ipc.on('newUserdb', async (e, newUser) => {
+    await newUserdb(newUser);
+    new Notification({
+      title: 'Nuevo usuario creado',
+      body: 'El nuevo usuario fue agragado correctamente',
     }).show();
   });
 });

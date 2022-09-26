@@ -109,6 +109,11 @@ body {
   text-transform: uppercase;
   font-weight: bold;
 }
+.login__button a {
+  text-decoration: none;
+  color: #ffffff;
+  width: 100%;
+}
 
 .login__button--secondary {
   background-color: var(--boton_inactivo);
