@@ -25,7 +25,9 @@
     "electron-builder": "^23.3.3"
   },
   "dependencies": {
+    "crypto-js": "^4.1.1",
     "electron-reload": "^2.0.0-alpha.1",
+    "hex2ascii": "^0.0.3",
     "mongodb": "^4.9.1",
     "promise-mysql": "^5.2.0"
   }
