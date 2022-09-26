@@ -1,8 +1,7 @@
-
 const tabla = document.getElementById('tableBody');
-const boton = document.getElementById('btn_validar');
+const btn_validar = document.getElementById('btn_validar');
 
-tabla.addEventListener('click',(e) => {
+tabla.addEventListener('click', (e) => {
   if (e.target && e.target.tagName === 'BUTTON') {
     const fila = e.target.parentNode.parentNode;
     const idFila = fila.children[0].innerHTML;
@@ -10,6 +9,6 @@ tabla.addEventListener('click',(e) => {
   }
 });
 
-btn_validar.addEventListener('click',(e) => {
-    window.location.href='ministeriolistasaprob.html'
+btn_validar.addEventListener('click', (e) => {
+  window.location.href = 'ministeriolistasaprob.html';
 });

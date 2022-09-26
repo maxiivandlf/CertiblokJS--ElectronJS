@@ -91,18 +91,19 @@
               <label for="career"> Carrera </label>
               <select name="career" id="career">
                 <option value="" disabled selected>Ingrese una carrera</option>
-                <option value="eisi">Ingenieria en sistemas</option>
-                <option value="elsi">Licenciatura en sistemas</option>
-                <option value="etui">
+                <option value="EISI">Ingenieria en sistemas</option>
+                <option value="ELSI">Licenciatura en sistemas</option>
+                <option value="ETUI">
                   Tecnicatura universitaria en sistemas
                 </option>
               </select>
               <label for="university"> Universidad </label>
-              <input
-                id="university"
-                type="text"
-                placeholder="Ingrese la universidad"
-              />
+              <select name="university" id="university">
+                <option value="" disabled selected>Ingrese Universidad</option>
+                <option value="UNLAR">UNLAR</option>
+                <option value="UTN">UTN</option>
+                <option value="UNC">UNC</option>
+              </select>
 
               <input type="submit" id="enviar" value="Enviar" />
             </form>
@@ -113,6 +114,8 @@
         </div>
       </section>
     </main>
+
+    <script src="../../app/alumno/dataTramites.js"></script>
 
     <script
       type="module"

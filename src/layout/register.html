@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Login</title>
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="../styles/globales.css" />
     <link rel="stylesheet" href="../styles/login/register.css" />
   </head>
   <body>
@@ -13,23 +14,60 @@
       </div>
     </div>
     <div>
-      <form class="register" id="formregister">
-        <h2 class="register__title">Registro del sistema</h2>
-        <input type="text" class="registro" id="userName" placeholder="Ingrese su nombre">
-        <input type="text" class="registro" id="lastName" placeholder="Ingrese su apellido">
-        <input type="password" class="registro" id="password" placeholder="Ingrese su contraseña">
-        <input type="text" class="registro" id="email" placeholder="Ingrese su email">
-        <label for="typeUser" >
+      <form class="register" id="form__register">
+        <h2 class="register__title">Registrarse en el sistema</h2>
+        <div class="campo__register">
+          <span>Nombre</span>
+          <input
+            type="text"
+            class="input__register"
+            id="userName"
+            placeholder="Ingrese su nombre"
+            required
+          />
+          <span>Apellido</span>
+          <input
+            type="text"
+            class="input__register"
+            id="lastName"
+            placeholder="Ingrese su apellido"
+            required
+          />
+          <span>Contraseña</span>
+          <input
+            type="password"
+            class="input__register"
+            id="password"
+            placeholder="Ingrese su contraseña"
+            required
+          />
+          <span>Correo electronico</span>
+          <input
+            type="email"
+            class="input__register"
+            id="email"
+            placeholder="Ingrese su email"
+            required
+          />
+
+          <label for="typeUser">
             Elija tipo de usuario
-            <select class="category_user" id="typeUser">
-            <option value="estudiantil">Estudiantil</option>
-            <option value="universidad">Universidad</option>
-            <option value="ministerio">Ministerio</option>
-          </select>
-        </label>
-        <input type="submit" class="btn_register" id="btnregister" value="Registrar">
+            <select required class="category_user" id="typeUser">
+              <option value="Alumno">Alumno</option>
+              <option value="Universidad">Universidad</option>
+              <option value="Ministerio">Ministerio</option>
+            </select>
+          </label>
+        </div>
+        <input
+          type="submit"
+          class="btn_register"
+          id="btnRegister"
+          value="Registrarse"
+        />
+        <a class="btn_register" href="./login.html">Iniciar sesión</a>
       </form>
     </div>
-    <script src="../app/login.js"></script>
+    <script src="../app/newUser.js"></script>
   </body>
 </html>
