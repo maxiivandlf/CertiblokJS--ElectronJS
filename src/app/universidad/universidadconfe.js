@@ -1,0 +1,1 @@
+const btn__enviar__confeccion = document.getElementById('btn__enviar__confeccion');
