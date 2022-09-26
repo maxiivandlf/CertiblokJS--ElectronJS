@@ -28,20 +28,27 @@ ul {
 body {
   background-color: var(--background);
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .container {
+  position: relative;
   display: flex;
-  height: 100vh;
+  height: 100%;
   max-width: 1200px;
 }
 
 .navbar {
+  position: static;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: auto;
   padding: 30px;
-  height: 100vh;
+
   width: 230px;
   background: var(--navbar);
   border-top-left-radius: 15px;
@@ -77,6 +84,7 @@ body {
 
 /* SECCION DE CONTENT*/
 .content {
+  position: relative;
   background-image: url(../img/FondoAlumnos.jpg);
   background-repeat: no-repeat;
   background-size: cover;

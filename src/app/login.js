@@ -1,10 +1,10 @@
 const { ipcRenderer } = require('electron');
 
-const formLogin = document.getElementById('formLogin');
 const usuario = document.getElementById('usuario');
 const contraseña = document.getElementById('contraseña');
 const categoria = document.getElementById('categoria');
 const btnIngesar = document.getElementById('btnIngesar');
+
 const messgError = document.getElementById('messgError');
 
 btnIngesar.addEventListener('click', (e) => {

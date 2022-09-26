@@ -1,43 +1,16 @@
 const { app, BrowserWindow, ipcMain: ipc, Notification } = require('electron');
-
-const { getConetion } = require('./src/utilities/dbconection');
-
 require('electron-reload')(__dirname);
-
-async function userValidation(User) {
-  const conx = await getConetion();
-
-  const resultado = await conx.query(
-    `SELECT * FROM users WHERE userName = "${User.userName}" AND password = "${User.userPassword}" AND typeUser = "${User.userCategory}" `
-  );
-
-  let valueValidation;
-  let category;
-
-  if (!Array.isArray(resultado) || resultado.length === 0) {
-    valueValidation = false;
-    category = false;
-  } else {
-    valueValidation = true;
-    category = resultado[0].typeUser;
-  }
-  const res = {
-    validate: valueValidation,
-    cat: category,
-  };
-  return res;
-}
-
-// async function getUser() {
-//   const conx = await getConetion();
-//   const resultadop = await conx.query('SELECT * FROM products');
-//   return resultadop;
-// }
+const { userValidation } = require('./src/utilities/validateusers.js');
+const { newProcedure } = require('./src/utilities/newProcedure.js');
+const {
+  dataProcedureID,
+  dataProcedure,
+} = require('./src/utilities/getProcedures.js');
 
 app.whenReady().then(() => {
   const win = new BrowserWindow({
     minWidth: 1200,
-    minHeight: 900,
+    minHeight: 600,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -51,6 +24,28 @@ app.whenReady().then(() => {
   ipc.on('comUser', async (env, User) => {
     const validation = await userValidation(User);
     win.webContents.send('validation', validation);
+  });
+
+  //Obtiene datos de tramites (procedure DB)
+  ipc.on('getProcedures', async (env) => {
+    const dataProced = await dataProcedure();
+    win.webContents.send('dataProcedure', dataProced);
+  });
+  ipc.on('getProcedureId', async (env, idProcedure) => {
+    const idProce = await dataProcedureID(idProcedure);
+    win.webContents.send('idproced', idProce);
+  });
+
+  //Guarda datos nuevo tramite
+
+  ipc.on('newProcedure', async (e, dataNewTramite) => {
+    dataNewTramite.state = 'Pendiente';
+    await newProcedure(dataNewTramite);
+
+    new Notification({
+      title: 'Nuevo tramite generado',
+      body: 'El nuevo tramite fue agragado correctamente',
+    }).show();
   });
 
   // ipc.on('comUser', async () => {
