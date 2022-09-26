@@ -95,11 +95,12 @@
   
   .table {
     background-color: var(--cuadro_de_datos);
-    width: 90%;
-    padding: 25px;
+    width: 95%;
+    padding: 35px;
     border-radius: 15px;
     border-collapse: collapse;
     text-align: center;
+    margin: auto;
   }
   .table__head {
     background-color: var(--boton_inactivo);
@@ -128,8 +129,10 @@
   }
 
   .footer{
-    margin-top: 30%;
-    text-align: left;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      padding-left: 20px;
   }
 
   /**header**/
