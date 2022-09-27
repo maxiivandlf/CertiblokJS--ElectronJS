@@ -48,6 +48,7 @@
 .seach__input {
   width: 750px;
   height: 35px;
+  color: black;
   cursor: pointer;
   margin-bottom: 16px;
   border-radius: 15px;

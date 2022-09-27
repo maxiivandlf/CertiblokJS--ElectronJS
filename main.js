@@ -17,6 +17,8 @@ app.whenReady().then(() => {
       contextIsolation: false,
     },
   });
+
+
   win.loadFile('./src/layout/login.html');
   win.maximize();
 
@@ -58,6 +60,7 @@ app.whenReady().then(() => {
     }).show();
   });
 });
+
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
