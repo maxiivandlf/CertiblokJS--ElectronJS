@@ -7,6 +7,11 @@ const {
   dataProcedure,
 } = require('./src/utilities/getProcedures.js');
 const { newUserdb } = require('./src/utilities/dbNewUser');
+const { newCertificate } = require('./src/utilities/createNewCertificate');
+const {
+  dataCertificate,
+  dataCertificateID,
+} = require('./src/utilities/getCertificates');
 
 app.whenReady().then(() => {
   const win = new BrowserWindow({
@@ -17,7 +22,6 @@ app.whenReady().then(() => {
       contextIsolation: false,
     },
   });
-
 
   win.loadFile('./src/layout/login.html');
   win.maximize();
@@ -59,8 +63,27 @@ app.whenReady().then(() => {
       body: 'El nuevo usuario fue agragado correctamente',
     }).show();
   });
-});
+  //Crea nuevo certificado
+  ipc.on('createNewCertificate', async (e, datanewCertificate) => {
+    await newCertificate(datanewCertificate);
 
+    new Notification({
+      title: 'Nuevo certificado creado',
+      body: 'El nuevo certificado fue agragado correctamente',
+    }).show();
+  });
+
+  //Obtiene datos de certificados
+  ipc.on('getCertificates', async (env) => {
+    const dataCerti = await dataCertificate();
+    win.webContents.send('dataCertificate', dataCerti);
+  });
+  //Obtiene datos de certificados por ID
+  ipc.on('getCertificateId', async (env, idCertificate) => {
+    const idCerti = await dataProcedureID(idCertificate);
+    win.webContents.send('idCerti', idCerti);
+  });
+});
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
