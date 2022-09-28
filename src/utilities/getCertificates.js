@@ -14,7 +14,15 @@ async function dataCertificateID(idCertificate) {
   return resultado;
 }
 
+async function changeState(dataChange) {
+  const conx = await getConetion();
+  await conx.query(
+    `UPDATE certificate SET state = "${dataChange.state}" WHERE id_certificate = ${dataChange.id}`
+  );
+}
+
 module.exports = {
   dataCertificate,
   dataCertificateID,
+  changeState,
 };

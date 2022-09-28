@@ -11,6 +11,7 @@ const { newCertificate } = require('./src/utilities/createNewCertificate');
 const {
   dataCertificate,
   dataCertificateID,
+  changeState,
 } = require('./src/utilities/getCertificates');
 
 app.whenReady().then(() => {
@@ -80,8 +81,13 @@ app.whenReady().then(() => {
   });
   //Obtiene datos de certificados por ID
   ipc.on('getCertificateId', async (env, idCertificate) => {
-    const idCerti = await dataProcedureID(idCertificate);
+    const idCerti = await dataCertificateID(idCertificate);
     win.webContents.send('idCerti', idCerti);
+  });
+
+  //Cambiar estado cetificados
+  ipc.on('changeState', async (e, state) => {
+    await changeState(state);
   });
 });
 

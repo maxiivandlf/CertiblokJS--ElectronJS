@@ -10,13 +10,11 @@ const seach__btn = document.getElementById('seach__btn');
 ipcRenderer.send('getCertificates');
 ipcRenderer.on('dataCertificate', (e, certificate) => {
   certificate.forEach((certificate) => {
-    tabla.innerHTML += `<tr class="fila" >
+    if (certificate.state === 'Pendiente')
+      tabla.innerHTML += `<tr class="fila" >
     <td id="id">${certificate.id_certificate}</td>
     <td>${certificate.nombreApellido}</td>
     <td>${certificate.state}</td>
-    <td>
-      <input class="btn__checkbox" id="checkbox__confecciones" type="checkbox"/>
-      </td>
     </tr>`;
   });
 });
@@ -31,23 +29,38 @@ seach__btn.addEventListener('click', (e) => {
   ipcRenderer.on('idCerti', (e, certificate) => {
     if (certificate.length !== 0) {
       tabla.innerHTML = `<tr class="fila" >
-        <td id="id">${certificate.id_certificate}</td>
-        <td>${certificate.nombreApellido}</td>
-        <td>${certificate.state}</td>
-        <td>
-        <input class="btn__checkbox" id="btn__checkbox" type="checkbox"/>
-        </td>
-        </tr>`;
+          <td id="id">${certificate[0].id_certificate}</td>
+          <td>${certificate[0].nombreApellido}</td>
+          <td>${certificate[0].state}</td>
+          <td>
+          <input class="btn__checkbox" id="btn__checkbox" type="checkbox"/>
+          </td>
+          </tr>`;
     }
   });
 });
+
 // Valida certificados seleccionados
+let datacertificateChange = {};
 tabla.addEventListener('click', (e) => {
-  if (e.target && e.target.tagName === 'INPUT') {
+  if (e.path[0].checked === true) {
+    btn_validar.disabled = false;
+
     const fila = e.target.parentNode.parentNode;
-    const idFila = fila.children[0].innerHTML;
-    console.log(`N° de tramite seleccionado es: ${idFila}`);
+    const idFila = fila.children;
+
+    let valores = Object.values(idFila);
+    datacertificateChange = {
+      id: valores[0].innerHTML,
+      state: 'En proceso',
+    };
+    console.log(datacertificateChange);
+  } else {
+    btn_validar.disabled = true;
   }
 });
 
-btn_validar.addEventListener('click', (e) => {});
+btn_validar.addEventListener('click', (e) => {
+  ipcRenderer.send('changeState', datacertificateChange);
+  console.log('clic');
+});

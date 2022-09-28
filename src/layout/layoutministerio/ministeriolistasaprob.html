@@ -66,36 +66,37 @@
           <div class="bienvenida">
             <h2>Validaciones Aprobadas</h2>
           </div>
+          <form class="seach" action="#">
+            <label for="tramite">
+              <input
+                class="seach__input"
+                id="seach__input"
+                type="number"
+                placeholder="Ingresé ID de Certificado"
+                min="0"
+              />
+            </label>
+
+            <input
+              class="seach__btn"
+              type="submit"
+              id="seach__btn"
+              value="Buscar"
+            />
+          </form>
           <div class="content_aprobados">
            <section class="results">
                <table class="table">
                  <thead class="table__head">
                    <tr>
-                     <th>ID</th>
+                     <th>ID Certificado</th>
                      <th>Nombre y Apellido</th>
-                     <th>Dni</th>
+                     <th>Estado</th>
                      <th>Detalles</Details></th>
                    </tr>
                  </thead>
                  <tbody class="table__body" id="tableBody">
-                   <tr class="fila">
-                     <td id="id">01</td>
-                     <td>Sam David</td>
-                     <td>8575966</td>
-                     <td><button class="btn_details" id="btn_details">View</button></td>
-                   </tr>
-                   <tr class="fila">
-                     <td id="id">02</td>
-                     <td>Perez Lucas</td>
-                     <td>9875966</td>
-                     <td><button class="btn_details" id="btn_details">View</button></td>
-                   </tr>
-                   <tr class="fila">
-                     <td id="id">03</td>
-                     <td>Gonzales Agustin</td>
-                     <td>1025666</td>
-                     <td><button class="btn_details" id="btn_details">View</button></td>
-                   </tr>
+                  
                   </tbody>
                </table>
            </section>
@@ -115,7 +116,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script src="../../app/ministerio/consultatramite.js"></script>
+    <script src="../../app/ministerio/lista_aAprobar.js"></script>
   </body>
 </html>
 
