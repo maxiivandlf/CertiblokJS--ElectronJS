@@ -18,6 +18,7 @@ app.whenReady().then(() => {
   const win = new BrowserWindow({
     minWidth: 1200,
     minHeight: 600,
+
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -26,6 +27,7 @@ app.whenReady().then(() => {
 
   win.loadFile('./src/layout/login.html');
   win.maximize();
+  win.setMenu(null);
 
   // IPC ON obtiene datos del proceso render escuchando el evento usuario
 
