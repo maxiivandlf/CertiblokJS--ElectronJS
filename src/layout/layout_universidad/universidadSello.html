@@ -1,92 +1,120 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../styles/globales.css">
-<link rel="stylesheet" href="../../styles/Estilo Universidad/globalesUniversidad.css">
-</head>
-<body>
-  <main class="container">
-    <nav class="navbar">
-      <ul class="navbar__links">
-        <li class="link">
-          <a href="./universidadInicio.html">
-            <ion-icon name="home-outline"></ion-icon>
-            <span>Inicio</span>
-          </a>
-        </li>
-        <li class="link">
-          <a href="./universidadValidacion.html">
-            <ion-icon name="mail-outline"></ion-icon>
-            <span>Validaciones Pendientes</span></a
-          >
-        </li>
-        <li class="link">
-          <a href="./universidadConfeccion.html">
-            <ion-icon name="footsteps-outline"></ion-icon>
-            <span>Confecciones</span>
-          </a>
-        </li>
-        <li class="link">
-          <a href="./universidadSello.html">
-            <ion-icon name="ribbon-outline"></ion-icon>
-            <span>Sello</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <section class="content">
-      <div class="blur">
-      <header class="header">
-        <div class="logo">
-          <h1 class="logo__title">Sistema de certificados</h1>
-          <span class="logo__subtitle">Basado en blockchain</span>
-        </div>
-        <div class="user">
-          <picture>
-            <img
-              class="user_img"
-              src="../../assets/users/school.png"
-              alt="Usuario"
-            />
-          </picture>
-          <span class="user_text">Usuario</span>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../styles/globales.css" />
+    <link
+      rel="stylesheet"
+      href="../../styles/Estilo Universidad/globalesUniversidad.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <nav class="navbar">
+        <ul class="navbar__links">
+          <li class="link">
+            <a href="./universidadInicio.html">
+              <ion-icon name="home-outline"></ion-icon>
+              <span>Inicio</span>
+            </a>
+          </li>
+          <li class="link">
+            <a href="./universidadValidacion.html">
+              <ion-icon name="mail-outline"></ion-icon>
+              <span>Validaciones Pendientes</span></a
+            >
+          </li>
+          <li class="link">
+            <a href="./universidadConfeccion.html">
+              <ion-icon name="footsteps-outline"></ion-icon>
+              <span>Confecciones</span>
+            </a>
+          </li>
+          <li class="link">
+            <a href="./universidadSello.html">
+              <ion-icon name="ribbon-outline"></ion-icon>
+              <span>Sello</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <section class="content">
+        <div class="blur">
+          <header class="header">
+            <div class="logo">
+              <h1 class="logo__title">Sistema de certificados</h1>
+              <span class="logo__subtitle">Basado en blockchain</span>
+            </div>
+            <div class="user">
+              <picture>
+                <img
+                  class="user_img"
+                  src="../../assets/users/school.png"
+                  alt="Usuario"
+                />
+              </picture>
+              <span class="user_text">Usuario</span>
 
-          <a href="../login.html">
-            <button class="user_exit" type="button">
-              <ion-icon name="exit-outline"></ion-icon>
+              <a href="../login.html">
+                <button class="user_exit" type="button">
+                  <ion-icon name="exit-outline"></ion-icon>
+                </button>
+              </a>
+            </div>
+          </header>
+          <div class="content__sello">
+            <form class="seach" action="#">
+              <label for="tramite">
+                <input
+                  class="seach__input"
+                  id="seach__input"
+                  type="number"
+                  placeholder="Ingresé ID de Certificado"
+                  min="0"
+                />
+              </label>
+
+              <input
+                class="seach__btn"
+                type="submit"
+                id="seach__btn"
+                value="Buscar"
+              />
+            </form>
+            <section class="results">
+              <div class="results__list">
+                <h1>Sellados Pendientes</h1>
+                <table class="table">
+                  <thead class="table__head">
+                    <tr>
+                      <th>ID certificados</th>
+                      <th>Hash</th>
+                      <th>Estado</th>
+                      <th>Seleccionar</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__body" id="tableBody"></tbody>
+                </table>
+              </div>
+            </section>
+            <button class="btn__enviar__sello" disabled id="btnsellado">
+              Sellar y Enviar
             </button>
-          </a>
-        </div>
-      </header>
-      <div class="content__sello">
-        <section class="results">
-          <div class="results__list">
-            <h1>Sellados Pendientes</h1>
-            <table class="table">
-              <thead class="table__head">
-                <tr>
-                  <th>ID certificados</th>
-                  <th>Hash</th>
-                  <th>Nombre del estudiante</th>
-                  <th>Estado</th>
-                  <th>Seleccionar</th>
-                </tr>
-              </thead>
-              <tbody class="table__body" id="tableBody"></tbody>
-            </table>
           </div>
-        </section>
-        <button class="btn__enviar__sello" id="btn__sellado">Sellar y Enviar</button>
-      </div>            
-      <footer class="footer">
-        <p class="title__footer">Copyrigth Seminario 2®</p>
-      </footer>
-      </div>
-    </section>
-  </main>
- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
- <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
- <script src="../../app/universidad/universidadsello.js"></script>
-</body>
+          <footer class="footer">
+            <p class="title__footer">Copyrigth Seminario 2®</p>
+          </footer>
+        </div>
+      </section>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../../app/universidad/universidadsello.js"></script>
+  </body>
 </html>

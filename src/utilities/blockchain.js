@@ -59,16 +59,18 @@ class Blockchain {
   returnData() {
     let self = this;
 
-    // for (let block of self.chain) {
-    //   console.log(block.body.toString());
-    // }
-    // //console.log(self.chain);
-    let body = [];
+    let bloks = [];
+
+    //console.log(self.chain);
+    // let body = [];
     self.chain.forEach((element) => {
-      let bodybloc = element.body.toString();
-      body.push(bodybloc);
+      let bodybloc = {
+        body: element.body.toString(),
+        hash: element.hash,
+      };
+      bloks.push(bodybloc);
     });
-    return body;
+    return bloks;
   }
 }
 

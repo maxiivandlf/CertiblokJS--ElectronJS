@@ -1,7 +1,7 @@
 const { ipcRenderer } = require('electron');
 
-const btn__generarpdf = document.getElementById('btn__generarpdf');
 const tabla = document.getElementById('tableBody');
+const btn_validar = document.getElementById('btn_validar');
 const seach__input = document.getElementById('seach__input');
 const seach__btn = document.getElementById('seach__btn');
 
@@ -10,12 +10,11 @@ const seach__btn = document.getElementById('seach__btn');
 ipcRenderer.send('getCertificates');
 ipcRenderer.on('dataCertificate', (e, certificate) => {
   certificate.forEach((certificate) => {
-    if (certificate.state === 'Aprobado') {
+    if (certificate.state === 'Pendiente') {
       tabla.innerHTML += `<tr class="fila" >
     <td id="id">${certificate.id_certificate}</td>
     <td>${certificate.nombreApellido}</td>
     <td>${certificate.state}</td>
-    
     </tr>`;
     }
   });
@@ -46,7 +45,7 @@ seach__btn.addEventListener('click', (e) => {
 let datacertificateChange = {};
 tabla.addEventListener('click', (e) => {
   if (e.path[0].checked === true) {
-    btn__generarpdf.disabled = false;
+    btn_validar.disabled = false;
 
     const fila = e.target.parentNode.parentNode;
     const idFila = fila.children;
@@ -54,15 +53,15 @@ tabla.addEventListener('click', (e) => {
     let valores = Object.values(idFila);
     datacertificateChange = {
       id: valores[0].innerHTML,
-      state: 'Sellado',
+      state: 'En proceso',
     };
     console.log(datacertificateChange);
   } else {
-    btn__generarpdf.disabled = true;
+    btn_validar.disabled = true;
   }
 });
 
-btn__generarpdf.addEventListener('click', (e) => {
+btn_validar.addEventListener('click', (e) => {
   ipcRenderer.send('changeState', datacertificateChange);
-  console.log('Se a Generado el PDF');
+  console.log('clic');
 });
