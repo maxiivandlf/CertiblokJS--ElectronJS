@@ -10,12 +10,13 @@ const seach__btn = document.getElementById('seach__btn');
 ipcRenderer.send('getCertificates');
 ipcRenderer.on('dataCertificate', (e, certificate) => {
   certificate.forEach((certificate) => {
-    if (certificate.state === 'Pendiente')
+    if (certificate.state === 'Pendiente') {
       tabla.innerHTML += `<tr class="fila" >
     <td id="id">${certificate.id_certificate}</td>
     <td>${certificate.nombreApellido}</td>
     <td>${certificate.state}</td>
     </tr>`;
+    }
   });
 });
 

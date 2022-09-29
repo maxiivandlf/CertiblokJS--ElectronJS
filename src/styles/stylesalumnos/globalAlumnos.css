@@ -81,6 +81,7 @@
 th {
   height: 40px;
 }
+
 .btn_view {
   padding: 0.5rem 1rem;
   border-radius: 15px;
@@ -196,4 +197,10 @@ select {
 #enviar:hover {
   scale: 1.1;
   transition: 0.5s;
+}
+
+/* OTORGADOS */
+
+.previewCertificate img {
+  width: 500px;
 }

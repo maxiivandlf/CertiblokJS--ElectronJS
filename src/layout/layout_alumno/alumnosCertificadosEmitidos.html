@@ -9,7 +9,8 @@
       rel="stylesheet"
       href="../../styles/stylesalumnos/globalAlumnos.css"
     />
-    <title>Tramites Alumnos</title>
+
+    <title>Seguimiento de tramites</title>
   </head>
   <body>
     <main class="container">
@@ -71,48 +72,36 @@
               </a>
             </div>
           </header>
-          <div class="section_principal">
-            <h2 class="title__principal">Bienvenidos</h2>
-            <p class="description">
-              Para iniciar un nuevo tramite debe completar el siguiente
-              formulario
-            </p>
-            <form class="form__tramite">
-              <label for="name"> Nombre </label>
-              <input id="name" type="text" placeholder="Ingrese su nombre" />
-              <label for="lastName"> Apellido </label>
-              <input
-                id="lastName"
-                type="text"
-                placeholder="Ingrese su apellido"
-              />
-              <label for="dni"> DNI </label>
-              <input id="dni" type="number" placeholder="Ingrese su DNI" />
-              <label for="enrollment"> Matricula </label>
-              <input
-                id="enrollment"
-                type="text"
-                placeholder="Ingrese su matricula"
-              />
-              <label for="career"> Carrera </label>
-              <select name="career" id="career">
-                <option value="" disabled selected>Ingrese una carrera</option>
-                <option value="EISI">Ingenieria en sistemas</option>
-                <option value="ELSI">Licenciatura en sistemas</option>
-                <option value="ETUI">
-                  Tecnicatura universitaria en sistemas
-                </option>
-              </select>
-              <label for="university"> Universidad </label>
-              <select name="university" id="university">
-                <option value="" disabled selected>Ingrese Universidad</option>
-                <option value="UNLAR">UNLAR</option>
-                <option value="UTN">UTN</option>
-                <option value="UNC">UNC</option>
-              </select>
 
-              <input type="submit" id="enviar" value="Enviar" />
-            </form>
+          <div class="section_principal">
+            <h2 class="title__principal">Certificados otorgados</h2>
+
+            <section class="results">
+              <h1 class="results__title">Lista de tramites en procesos</h1>
+              <table class="table">
+                <thead class="table__head">
+                  <tr>
+                    <th>N° Certificado</th>
+                    <th>Nombre y Apellido</th>
+                    <th>DNI</th>
+                    <th>Matricula</th>
+                    <th>Carrera</th>
+                    <th>Universidad</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+                <tbody class="table__body" id="tableBody"></tbody>
+              </table>
+              <br />
+              <h1 class="results__title">Vista Previa</h1>
+              <br />
+              <picture class="previewCertificate">
+                <img
+                  src="../../assets/certificate/certificate.webp"
+                  alt="Imagen preview certificate"
+                />
+              </picture>
+            </section>
           </div>
           <footer class="footer">
             <p class="title__footer">Copyrigth Seminario 2®</p>
@@ -120,8 +109,6 @@
         </div>
       </section>
     </main>
-
-    <script src="../../app/alumno/dataTramites.js"></script>
 
     <script
       type="module"
@@ -131,5 +118,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script src="../../app/alumno/alumnosEmitidos.js"></script>
   </body>
 </html>

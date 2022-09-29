@@ -43,7 +43,7 @@ seach__btn.addEventListener('click', (e) => {
 });
 
 // Valida certificados seleccionados
-//let datacertificateChange = {};
+let datacertificateChange = {};
 tabla.addEventListener('click', (e) => {
   if (e.path[0].checked === true) {
     btnsellado.disabled = false;
@@ -52,12 +52,16 @@ tabla.addEventListener('click', (e) => {
     const idFila = fila.children;
 
     let valores = Object.values(idFila);
-    console.log(valores[2].innerHTML);
+    datacertificateChange = {
+      id: valores[0].innerHTML,
+      state: 'Emitido',
+    };
   } else {
     btnsellado.disabled = true;
   }
 });
 
 btnsellado.addEventListener('click', (e) => {
+  ipcRenderer.send('changeState', datacertificateChange);
   console.log('Enviado a Alumno');
 });
