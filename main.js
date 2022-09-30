@@ -18,6 +18,7 @@ app.whenReady().then(() => {
   const win = new BrowserWindow({
     minWidth: 1200,
     minHeight: 600,
+    icon: './src/assets/icons/contract.png',
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
