@@ -22,7 +22,8 @@
   "homepage": "https://github.com/maxiivandlf/seminario_2#readme",
   "devDependencies": {
     "electron": "20.1.0",
-    "electron-builder": "^23.3.3"
+    "electron-builder": "^23.3.3",
+    "html2pdf.js": "^0.10.1"
   },
   "dependencies": {
     "crypto-js": "^4.1.1",

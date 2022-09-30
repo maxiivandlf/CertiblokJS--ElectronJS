@@ -1,0 +1,26 @@
+body {
+  width: 100vw;
+}
+.body__pdf {
+  background-image: url('../assets/certificate/certificate.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+.name {
+  margin-left: 200px;
+  margin-top: 170px;
+  text-align: center;
+}
+.carrera {
+  margin-left: 200px;
+}
+.hash {
+  margin-left: 150px;
+}
