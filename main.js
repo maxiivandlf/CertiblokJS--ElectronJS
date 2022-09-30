@@ -27,6 +27,7 @@ app.whenReady().then(() => {
 
   win.loadFile('./src/layout/login.html');
   win.maximize();
+  win.setMenu(null);
 
   // IPC ON obtiene datos del proceso render escuchando el evento usuario
 
