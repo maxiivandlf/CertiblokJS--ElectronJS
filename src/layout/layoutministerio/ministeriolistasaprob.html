@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../../styles/stylesMinisterio/GlobalMinisterio.css" rel="stylesheet" type="text/css" />
     <link href="../../styles/globales.css" rel="stylesheet" type="text/css"/>
+    <link href="../../styles/stylesMinisterio/GlobalMinisterio.css" rel="stylesheet" type="text/css" />
 
     <title>Ministerio de educación</title>
   </head>
@@ -63,48 +63,47 @@
               </a>
             </div>
           </header>
-          <div class="bienvenida">
+          <div class="section_principal">
             <h2>Validaciones Aprobadas</h2>
-          </div>
-          <form class="seach" action="#">
-            <label for="tramite">
-              <input
-                class="seach__input"
-                id="seach__input"
-                type="number"
-                placeholder="Ingresé ID de Certificado"
-                min="0"
-              />
-            </label>
+            
+            <form class="formulary__seach" action="#">
+              <label for="tramite">
+                <input
+                  class="seach__input"
+                  id="seach__input"
+                  type="number"
+                  placeholder="Ingresé ID de Certificado"
+                  min="0"
+                />
+              </label>
 
-            <input
-              class="seach__btn"
-              type="submit"
-              id="seach__btn"
-              value="Buscar"
-            />
-          </form>
-          <div class="content_aprobados">
-           <section class="results">
-               <table class="table">
-                 <thead class="table__head">
-                   <tr>
-                     <th>ID Certificado</th>
-                     <th>Nombre y Apellido</th>
-                     <th>Estado</th>
-                     <th>Detalles</Details></th>
-                   </tr>
-                 </thead>
-                 <tbody class="table__body" id="tableBody">
-                  
-                  </tbody>
-               </table>
-           </section>
-           <button class="btn_view" id="btn_oblea">Generar Oblea y Enviar</button>
+              <input
+                class="seach__btn"
+                type="submit"
+                id="seach__btn"
+                value="Buscar"
+              />
+            </form>
+            <section class="results">
+                <table class="table">
+                  <thead class="table__head">
+                    <tr>
+                      <th>ID Certificado</th>
+                      <th>Nombre y Apellido</th>
+                      <th>Estado</th>
+                      <th>Detalles</Details></th>
+                    </tr>
+                  </thead>
+                  <tbody class="table__body" id="tableBody"></tbody>
+                </table>
+                <button class="btn" disabled id="btn_oblea">Generar Oblea y Enviar</button>
+            </section>
+            
           </div>
           <footer class="footer">
            <p class="title__footer">Copyrigth Seminario 2®</p>
           </footer>
+          
         </div>
       </section>
     </main>

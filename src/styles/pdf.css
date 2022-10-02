@@ -1,26 +1,37 @@
+* {
+  color: #000;
+}
 body {
   width: 100vw;
+  background-color: #fff;
 }
 .body__pdf {
   background-image: url('../assets/certificate/certificate.webp');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
-  width: 90%;
-  height: 90vh;
+  width: 842px;
+  height: 595px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   margin-bottom: 15px;
 }
+h2 {
+  text-align: center;
+  margin-top: 30px;
+}
 .name {
-  margin-left: 200px;
-  margin-top: 170px;
+  margin-top: 230px;
   text-align: center;
 }
 .carrera {
-  margin-left: 200px;
+}
+h3 {
+  margin-left: 100px;
+  margin-top: 70px;
 }
 .hash {
-  margin-left: 150px;
+  width: 300px;
+  word-wrap: break-word;
+  margin-left: 100px;
 }

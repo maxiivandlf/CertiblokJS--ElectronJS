@@ -67,28 +67,28 @@
               </a>
             </div>
           </header>
-          <div class="bienvenida">
+          <div class="section_principal">
             <h1>Lista de certificados</h1>
-          </div>
-          <form class="seach" action="#">
-            <label for="tramite">
-              <input
-                class="seach__input"
-                id="seach__input"
-                type="number"
-                placeholder="Ingresé ID de Certificado"
-                min="0"
-              />
-            </label>
 
-            <input
-              class="seach__btn"
-              type="submit"
-              id="seach__btn"
-              value="Buscar"
-            />
-          </form>
-          <div class="content_validacion">
+            <form class="formulary__seach" action="#">
+              <label for="tramite">
+                <input
+                  class="seach__input"
+                  id="seach__input"
+                  type="number"
+                  placeholder="Ingresé ID de Certificado"
+                  min="0"
+                />
+              </label>
+
+              <input
+                class="seach__btn"
+                type="submit"
+                id="seach__btn"
+                value="Buscar"
+              />
+            </form>
+
             <section class="results">
               <table class="table">
                 <thead class="table__head">
@@ -101,8 +101,10 @@
                 </thead>
                 <tbody class="table__body" id="tableBody"></tbody>
               </table>
+              <button class="btn" disabled id="btn_enviar">
+                Confirmar y enviar
+              </button>
             </section>
-            <button class="btn_view" id="btn_enviar">Confirmar y enviar</button>
           </div>
 
           <footer class="footer">

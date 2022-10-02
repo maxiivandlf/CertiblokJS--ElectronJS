@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="../utilities/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="../styles/globales.css" />
     <link rel="stylesheet" href="../styles/pdf.css" />
 
     <title>Preview Certificado</title>
@@ -12,15 +13,16 @@
   <body>
     <div class="body__pdf" id="certificate">
       <h1 id="name" class="name">Maximiliano Ivan de la Fuente</h1>
+      <h2>Carrera:</h2>
       <h2 id="carrera" class="carrera">
         Ingenieria en Sistemas de Información
       </h2>
-
+      <h3>Hash</h3>
       <p id="hash" class="hash">
         cd76fbc5728fd12812d207dc98a8831cc06109fc276dd64cf4507074321e77e4
       </p>
     </div>
-    <button id="btnGenerar">Generar</button>
+    <button class="btn" id="btnGenerar">Guardar PDF</button>
 
     <script src="../utilities/generatePDF.js"></script>
   </body>

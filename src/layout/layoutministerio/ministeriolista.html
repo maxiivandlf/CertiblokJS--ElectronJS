@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../../styles/globales.css">
+   <link rel="stylesheet" href="../../styles/globales.css">
     <link href="../../styles/stylesMinisterio/GlobalMinisterio.css" rel="stylesheet" type="text/css" />
 
     <title>Ministerio de educación</title>
@@ -63,11 +63,9 @@
               </a>
             </div>
           </header>
-          <div class="section_tabla">
-            <div class="bienvenida">
-              <h2>Analiticos a Validar</h2>
-            </div>
-            <form class="seach" action="#">
+          <div class="section_principal">
+            <h2>Analiticos a Validar</h2>            
+            <form class="formulary__seach" action="#">
               <label for="tramite">
                 <input
                   class="seach__input"
@@ -85,7 +83,7 @@
                 value="Buscar"
               />
             </form>
-          <section class="results">
+            <section class="results">
               <table class="table">
                 <thead class="table__head">
                   <tr>
@@ -97,15 +95,13 @@
                 </thead>
                 <tbody class="table__body" id="tableBody"></tbody>
               </table>
-          </section>
-          <button class="btn_view" disabled id="btn_validar">Validar</button>
-          
-        </div>
+              <button class="btn" disabled id="btn_validar">Validar</button>
+            </section> 
+          </div>
           <footer class="footer">
             <p class="title__footer">Copyrigth Seminario 2®</p>
           </footer>
         </div>
-
       </section>
     </main>
     <script
