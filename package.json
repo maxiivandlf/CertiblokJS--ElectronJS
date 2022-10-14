@@ -30,5 +30,15 @@
     "hex2ascii": "^0.0.3",
     "mongodb": "^4.9.1",
     "promise-mysql": "^5.2.0"
+  },
+  "build": { 
+      
+    "win": {
+    
+    "icon": "/src/assets/icons/contract512.png"
+    
+    }
+    
   }
+    
 }

@@ -2,6 +2,7 @@
 
 #installers
 /linux
+/dist
 # dependencies
 
 /node_modules
