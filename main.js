@@ -32,6 +32,7 @@ app.whenReady().then(() => {
   // IPC ON obtiene datos del proceso render escuchando el evento usuario
 
   ipc.on('comUser', async (env, User) => {
+    //compara usuarios en la BD
     const validation = await userValidation(User);
     win.webContents.send('validation', validation);
   });
@@ -41,6 +42,7 @@ app.whenReady().then(() => {
     const dataProced = await dataProcedure();
     win.webContents.send('dataProcedure', dataProced);
   });
+  //Obitiene tramites por ID
   ipc.on('getProcedureId', async (env, idProcedure) => {
     const idProce = await dataProcedureID(idProcedure);
     win.webContents.send('idproced', idProce);
